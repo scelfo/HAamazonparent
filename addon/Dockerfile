@@ -28,6 +28,8 @@ RUN apt-get update \
         xvfb \
         x11vnc \
         fluxbox \
+        novnc \
+        websockify \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
@@ -72,7 +74,7 @@ RUN mkdir -p /share/amazonparent && \
     chmod 700 /share/amazonparent
 
 # Expose ports
-EXPOSE 8100 5903
+EXPOSE 8100 6080
 
 # Health check
 HEALTHCHECK --interval=30s --timeout=10s --start-period=30s --retries=3 \
