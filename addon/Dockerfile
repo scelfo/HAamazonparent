@@ -25,6 +25,7 @@ RUN apt-get update \
         libxrandr2 \
         libgbm1 \
         libasound2 \
+        libatomic1 \
         xvfb \
         x11vnc \
         fluxbox \
@@ -66,6 +67,7 @@ COPY rootfs /
 
 # Make scripts executable
 RUN chmod a+x /usr/local/bin/run.sh \
+    && chmod a+x /usr/local/bin/run-standalone.sh \
     && chmod a+x /etc/services.d/amazonparent/run \
     && chmod a+x /etc/services.d/amazonparent/finish
 
