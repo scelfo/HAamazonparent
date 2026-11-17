@@ -9,7 +9,7 @@ add_bonus_time:
       name: Child
       description: Child first name (case-insensitive) or Amazon directedId.
       required: true
-      example: Garrett
+      example: Toka
       selector:
         text:
     minutes:
@@ -33,6 +33,6 @@ clear_bonus_time:
       name: Child
       description: Child first name (case-insensitive) or Amazon directedId.
       required: true
-      example: Garrett
+      example: Toka
       selector:
         text:
